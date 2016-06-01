@@ -10,6 +10,14 @@ Manatarms.makeSelectable = function () {
   }
 };
 
+Manatarms.GlobalSelector = function () {
+  var canvas = document.getElementById("canvas");
+  canvas.onclick = function () {
+    console.log("SELECT");
+    Manatarms.initializeSelector();
+  }
+}
+
 Manatarms.initializeSelector = function (x, y) {
   this.origin = {
     x: x,
